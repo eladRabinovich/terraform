@@ -1,0 +1,9 @@
+region          = "us-east4"
+gcp_project     = "iftachtest"
+credentials     = "credentials.json"
+name            = "mongos-dr-vpc"
+subnet_cidr     = "10.10.0.0/16"
+mongodb_number  = 3
+key_name        = "ssh-access-key"
+ssh_user        = "local"
+machine_type    = "n1-standard-1" 

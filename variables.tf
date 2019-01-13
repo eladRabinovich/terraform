@@ -1,0 +1,10 @@
+variable "region" {}
+variable "gcp_project" {}
+variable "credentials" {}
+variable "name" {}
+variable "subnet_cidr" {}
+variable "mongodb_number" {}
+variable "public_key" {}
+variable "key_name" {}
+variable "ssh_user" {}
+variable "machine_type" {}
