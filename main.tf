@@ -1,6 +1,5 @@
 // Configure the Google Cloud provider
 provider "google" {
- //credentials = "${file("${var.credentials}")}"
  credentials = "${file("./creds/serviceaccount.json")}"
  project     = "${var.gcp_project}"
  region      = "${var.region}"
@@ -101,6 +100,6 @@ resource "google_compute_instance" "mongodb-instance" {
   }
 }
 
-output "IPs" {
-  value = "${join("-",google_compute_instance.mongodb-instance.*.network_interface.0.network_ip)}"
+output "nodesIps" {
+  value = ["${google_compute_instance.mongodb-instance.*.network_interface.0.network_ip}"]
 }
