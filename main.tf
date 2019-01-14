@@ -41,7 +41,7 @@ resource "google_compute_subnetwork" "subnet" {
 resource "google_compute_firewall" "allow-icmp-ssh" {
   name          = "${var.name}-fw-allow-icmp-ssh"
   network       = "${google_compute_network.vpc.name}"
-  target_tags   = ["mongo-s", "mongo-p"]
+  target_tags   = ["mongodb-dr"]
   source_ranges = ["0.0.0.0/0"]
 
   allow {
