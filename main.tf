@@ -103,3 +103,11 @@ resource "google_compute_instance" "mongodb-instance" {
 output "nodesIps" {
   value = ["${google_compute_instance.mongodb-instance.*.network_interface.0.network_ip}"]
 }
+
+output "zones" {
+  value = ["${google_compute_instance.mongodb-instance.*.zone}"]
+}
+
+output "names" {
+  value = ["${google_compute_instance.mongodb-instance.*.name}"]
+}
